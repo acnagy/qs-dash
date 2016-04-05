@@ -1,1 +1,67 @@
 /* CSS declarations go here */
+
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:100,300,500);
+
+/************************************************
+        Site-Wide Elements
+ ***********************************************/
+html{
+    height: 100%;
+    padding: 0;
+}
+
+body {
+    height: 100%,
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: linear-gradient(#CADF4E, #1AAAD6);
+    margin: 0;
+}
+
+h1{
+    font-family: 'Work Sans', 'sans-serif';
+    font-weight: 500;
+    color: white;
+    font-size: 48px;
+    padding: 1% 4%;
+}
+
+h2 {
+    font-family: 'Work Sans', 'sans-serif';
+    font-weight: 300;
+}
+
+section {
+    padding: 1% 4%;
+}
+
+header {
+    background: rgba(255,255,255,0.2);
+    padding: 0;
+}
+
+label {
+    font-family: 'Work Sans', 'sans-serif';
+    font-weight: 300;
+    font-size: 24px;
+}
+input[type=checkbox] {
+      transform: scale(1.5);
+      -webkit-transform: scale(1.5);
+      margin: 0em 3em;
+}
+
+
+
+/************************************************
+        Learning Page
+ ***********************************************/
+
+
+div.resource {
+    border: thin grey solid;
+    box-shadow: 2px 2px 1px grey;
+    max-width: 30%;
+    padding: 2em;
+    background: linear-gradient(white, #F1F1F1);
+}
