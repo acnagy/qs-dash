@@ -6,7 +6,7 @@
         Site-Wide Elements
  ***********************************************/
 html{
-    height: 100%;
+    min-height: 100%;
     padding: 0;
 }
 
@@ -29,10 +29,33 @@ h1{
 h2 {
     font-family: 'Work Sans', 'sans-serif';
     font-weight: 300;
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+p {
+    display: inline-block;
+}
+
+a {
+    color: #1AAAD6;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+a > span:hover{
+    text-decoration: underline;
 }
 
 section {
     padding: 1% 4%;
+    display: block;
 }
 
 header {
@@ -45,6 +68,7 @@ label {
     font-weight: 300;
     font-size: 24px;
 }
+
 input[type=checkbox] {
       transform: scale(1.5);
       -webkit-transform: scale(1.5);
@@ -57,11 +81,53 @@ input[type=checkbox] {
         Learning Page
  ***********************************************/
 
+#add-resource {
+    color: white;
+    display: inline-block;
+    text-align: right;
+    right: 0.5em;
+    top: 120px;
+    position: absolute;
+    font-size: 18px;
+    margin: 0.4em;
+    padding: 0.4em;
+    border: thin solid white;
+    border-radius: 50px;
+}
+
+.add-resource {
+    margin: 0px;
+}
+
+#resources-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
 
 div.resource {
-    border: thin grey solid;
     box-shadow: 2px 2px 1px grey;
-    max-width: 30%;
+    min-width: 25%;
+    max-width: 45%;
     padding: 2em;
+    margin: 1em;
     background: linear-gradient(white, #F1F1F1);
+    display: inline-block;
+}
+
+div.resource-details {
+    display: flex;
+    margin-top: 1em;
+}
+
+.resource-checked-count {
+    margin: 0.5em;
+    display: inline-block;
+    color: #CADF4E;
+    border: thin solid #CADF4E;
+    border-radius: 100px;
+    max-height: 24px;
+    line-height: 24px;
+    padding: 0.5em;
+    align-content: center;
 }
