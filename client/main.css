@@ -82,26 +82,26 @@ input[type=checkbox] {
  ***********************************************/
 
 #add-resource {
+}
+
+.add-resource {
     color: white;
-    display: inline-block;
     text-align: right;
-    right: 0.5em;
-    top: 120px;
-    position: absolute;
     font-size: 18px;
     margin: 0.4em;
     padding: 0.4em;
     border: thin solid white;
     border-radius: 50px;
-}
-
-.add-resource {
     margin: 0px;
+    right: 0.5em;
+    top: 130px;
+    position: absolute;
+    text-align: right;
 }
 
 #resources-grid {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     flex-wrap: wrap;
 }
 
