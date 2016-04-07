@@ -6,12 +6,19 @@ if (Meteor.isClient) {
         'submit form': function(event) {
             event.preventDefault();
             console.log("registration form submitted");
-            var userEmail: event.target.registerEmail.value;
-            var userPassword: event.target.registerPassword.value;
-            Accounts.createUser ({
-                email: userEmail,
-                password: userPassword,
-            });
+            var userVar: event.target.registerUser.value;
+            var password: event.target.registerPassword.value;
+            
+            var isValidPassword = function(val) {
+             return val.length; 
+            }
+
+            if (isValidPassword(userPassword)) {
+                    Accounts.createUser ({
+                    username: userVar,
+                    password: passwordVar,
+                });
+            }
         }
     });
 
@@ -21,9 +28,9 @@ if (Meteor.isClient) {
         'submit form': function(event) {
             event.preventDefault();
             console.log("login form submitted");
-            var userEmail: event.target.registerEmail.value;
-            var userPassword: event.target.registerPassword.value;
-            Meteor.loginWithPassword(emailVar, passwordVar);
+            var userVar: event.target.loginUser.value;
+            var passwordVar: event.target.loginPassword.value;
+            Meteor.loginWithPassword(userVar, passwordVar);
         }
     });
 }

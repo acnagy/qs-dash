@@ -68,7 +68,7 @@ label {
     font-weight: 300;
     font-size: 24px;
 }
-input[type=email],input[type=password] {
+input[type=text],input[type=password] {
     font-family: "Work Sans", sans-serif;
     background: none;
     box-shadow: none;
@@ -118,7 +118,7 @@ div.login-label {
 div.login-field {
     padding-right: 20%;
 }
-input[type=email].login, input[type=password].login {
+input[type=text].login, input[type=password].login {
     display: inline;
     min-width: 100%;
     text-align: center;
@@ -143,6 +143,9 @@ input[type=submit]{
     font-weight: 200;
     font-size: 14px;
     line-height: 30px;
+}
+input:focus {
+    outline: none;
 }
 
 
