@@ -2,8 +2,10 @@
     {{#if currentUser}}
         {{> learning}}
     {{else}}
-        <h1 class="login">Login</h1>
-        {{> register}}
-        {{> login}}
+        {{#if showRegisterTemplate}}
+            {{> register}}
+        {{else}}
+            {{> login}}
+        {{/if}}
     {{/if}}
 </body>

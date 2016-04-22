@@ -23,7 +23,7 @@ h1{
     font-weight: 500;
     color: white;
     font-size: 48px;
-    padding: 1% 4%;
+    padding: 0.25em 1em;
 }
 
 h2 {
@@ -68,7 +68,7 @@ label {
     font-weight: 300;
     font-size: 24px;
 }
-input[type=text],input[type=password] {
+input[type=text],input[type=password], input[type=email] {
     font-family: "Work Sans", sans-serif;
     background: none;
     box-shadow: none;
@@ -80,6 +80,42 @@ input[type=checkbox] {
       transform: scale(1.5);
       -webkit-transform: scale(1.5);
       margin: 0em 3em;
+}
+.hidden {
+    display: none !important;
+}
+/************************************************
+        Nav
+ ***********************************************/
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.25em 4em;
+}
+
+nav > section { 
+    padding: 0em 1em;
+}
+
+.button {
+    color: white;
+    text-align: right;
+    display: inline-block;
+    font-size: 18px;
+    margin: 7px;
+    padding: 7px;
+    border: thin solid white;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 0px;
+    text-align: right;
+}
+
+.button:focus, .button:hover {
+    outline: none;
+    border: 2px solid white;
+    padding: 6px;
 }
 
 /************************************************
@@ -102,6 +138,12 @@ h2.login {
     display: inline;
     color: white;
 }
+h2.login-error {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 7px 7px;
+    text-align: center;
+    display: block
+}
 label.login {
     display: flex;
     justify-content: space-around;
@@ -118,7 +160,7 @@ div.login-label {
 div.login-field {
     padding-right: 20%;
 }
-input[type=text].login, input[type=password].login {
+input[type=email].login, input[type=password].login {
     display: inline;
     min-width: 100%;
     text-align: center;
@@ -144,32 +186,15 @@ input[type=submit]{
     font-size: 14px;
     line-height: 30px;
 }
-input:focus {
+input[type=email]:focus, input[type=password]:focus, input[type=submit]:focus {
     outline: none;
+    border: 2px solid white;
 }
 
 
 /************************************************
         Learning Page
  ***********************************************/
-
-#add-resource {
-}
-
-.add-resource {
-    color: white;
-    text-align: right;
-    font-size: 18px;
-    margin: 0.4em;
-    padding: 0.4em;
-    border: thin solid white;
-    border-radius: 50px;
-    margin: 0px;
-    right: 0.5em;
-    top: 130px;
-    position: absolute;
-    text-align: right;
-}
 
 #resources-grid {
     display: flex;
@@ -203,3 +228,4 @@ div.resource-details {
     padding: 0.5em;
     align-content: center;
 }
+

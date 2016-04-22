@@ -1,13 +1,18 @@
-<template name="register">
-    <form class="login">
+<template name="register" class="hidden">
+<h1 class="login">Register</h1>
+<h2 class="login" id="showLoginLink">Login?</h2>
+    
+    <form class="login" id="#register-form">
+        
         <label class="login">
             <div class="login-label">
-                <h2 class="login">Username</h2>
+                <h2 class="login">Email</h2>
             </div>
             <div class="login-field">
-                <input class="login" type="text" name="registerUser">
+                <input class="login" type="email" name="registerEmail">
             </div>
         </label>
+        
         <label class="login">
             <div class="login-label">
                 <h2 class="login">Password</h2>
@@ -16,20 +21,28 @@
                 <input class="login" type="password" name="registerPassword">
             </div>
         </label>
+        
         <input type="submit" value="Submit">
+    
     </form>
 </template>
 
 <template name="login">
+    <h1 class="login">Login</h1>
+    <h2 class="login-error login hidden" id="login-error">Email/Password combo doesn't seem to be correct</h2>
+    <h2 class="login" id="showRegisterLink">Register?</h2>
+
     <form class="login">
+
         <label class="login">
             <div class="login-label">
-                <h2 class="login">Username</h2>
+                <h2 class="login">Email</h2>
             </div>
             <div class="login-field">
-                <input class="login" type="text" name="loginUser">
-            </div>
+                <input class="login" type="email" name="loginEmail">
+            </div> 
         </label>
+        
         <label class="login">
             <div class="login-label">
                 <h2 class="login login-label">Password</h2>
@@ -38,6 +51,18 @@
                 <input  class="login" type="password" name="loginPassword">
             </div>
         </label>
+        
         <input type="submit" value="Login">
+    
     </form>
+</template>
+
+<template name="logout">
+    <section id="logout">
+        <a href="#" class="logout">
+            <p class="button">
+                <span class="fa fa-sign-out">  Logout</span>
+            </p>
+        </a>
+    </section>
 </template>
