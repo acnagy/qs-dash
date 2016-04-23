@@ -6,7 +6,6 @@ if (Meteor.isClient) {
         'click #showLoginLink' : function(){
             Session.set('showNewLoginTemplate', false);
             var showNewLoginTemplate = Session.get('showNewLoginTemplate');
-            console.log(showNewLoginTemplate);
         },
         'submit form': function(event) {
             event.preventDefault();
@@ -27,7 +26,6 @@ if (Meteor.isClient) {
         'click #showNewLoginLink': function(event) {
             Session.set('showNewLoginTemplate', true);
             var showNewLoginTemplate = Session.get('showNewLoginTemplate');
-            console.log(showNewLoginTemplate);
         },
         'submit form': function(event) {
             event.preventDefault();
@@ -57,7 +55,6 @@ if (Meteor.isClient) {
         'click .logout': function(event){
             event.preventDefault();
             Meteor.logout();
-            Router.go('login')
         }
     });
 
