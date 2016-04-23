@@ -2,15 +2,16 @@ if (Meteor.isClient) {
 
     // Registration and User Creation
 
-    Template.register.events({
+    Template.new_login.events({
         'click #showLoginLink' : function(){
-            console.log("show login");
-            Session.set('showRegister',false);
+            Session.set('showNewLoginTemplate', false);
+            var showNewLoginTemplate = Session.get('showNewLoginTemplate');
+            console.log(showNewLoginTemplate);
         },
         'submit form': function(event) {
             event.preventDefault();
-            var emailVar = $('[name=registerEmail]').val();
-            var passwordVar = $('[name=registerPassword]').val();
+            var emailVar = $('[name=newLoginEmail]').val();
+            var passwordVar = $('[name=newLoginPassword]').val();
             Accounts.createUser({
                 email: emailVar,
                 password: passwordVar
@@ -20,18 +21,13 @@ if (Meteor.isClient) {
     });
 
 
-    Template.register.helpers({
-        showRegisterTemplate : function () {
-            return Session.get('showRegister')
-        }
-    });
-
     // Logging In
 
     Template.login.events({
-        'click #showRegisterLink': function() {
-            console.log("show register");
-            Session.set('showRegister',true);
+        'click #showNewLoginLink': function(event) {
+            Session.set('showNewLoginTemplate', true);
+            var showNewLoginTemplate = Session.get('showNewLoginTemplate');
+            console.log(showNewLoginTemplate);
         },
         'submit form': function(event) {
             event.preventDefault();
@@ -48,12 +44,12 @@ if (Meteor.isClient) {
         }
     });
 
-        Template.login.helpers({
-        showRegisterTemplate : function () {
-            return Session.get('showRegisterTemplate')
+    // Switch Template
+    Template.body.helpers({
+        showNewLoginTemplate(){
+            return Session.get('showNewLoginTemplate');
         }
-    });
-
+    })
 
     // Logging Out
 
