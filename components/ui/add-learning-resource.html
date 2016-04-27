@@ -1,0 +1,29 @@
+<template name="add_resource_template">
+    <h2 class="add-learning">Add Learning Resource</h2>
+    
+    <form class="add-resource-template">
+        <div>
+            <label>Title</label>
+            <input type="text" name="addResourceTitle">
+        </div>
+
+        <div class="checkboxes">
+            <label>Type</label>
+            <div>
+                <input type="checkbox" name="type" value="text"><span class="fa fa-file-text-o">  Text</span>
+            </div>
+            <div>
+                <input type="checkbox" name="type" value="video"><span class="fa fa-play-circle-o">  Video</span>
+            </div>
+        </div>
+
+        <div>
+            <label>Description</label>
+            <textarea name="description"></textarea>
+        </div>
+
+        <input type="submit" value="Post Resource">
+
+    </form>
+
+</template>

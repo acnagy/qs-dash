@@ -4,13 +4,46 @@
     </header>
 
     <nav>
-    <section id="add-resource">
+     <section id="add_resource">
         <p class="button">
             <span class="fa fa-plus-circle">  Add</span>
         </p>
-    </section>
+    </section>    
     {{> logout}}
     </nav>
+
+    <aside> 
+    <!--{{#if showAddLearningTemplate}}
+        {{> add_resource_template}}
+    {{/if}}-->
+        <h2 class="add-learning">Add Learning Resource</h2>
+        
+        <form class="add-resource-template hidden" id="add_resource_template">
+            <div>
+                <label>Title</label>
+                <input type="text" name="addResourceTitle">
+            </div>
+
+            <div class="checkboxes">
+                <label>Type</label>
+                <div>
+                    <input type="checkbox" name="type" value="text"><span class="fa fa-file-text-o">  Text</span>
+                </div>
+                <div>
+                    <input type="checkbox" name="type" value="video"><span class="fa fa-play-circle-o">  Video</span>
+                </div>
+            </div>
+
+            <div>
+                <label>Description</label>
+                <textarea name="description"></textarea>
+            </div>
+
+            <input type="submit" value="Post Resource">
+
+        </form>
+
+    </aside>
 
     <section id="resources-grid">
         <div class="resource">
