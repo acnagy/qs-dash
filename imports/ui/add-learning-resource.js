@@ -1,1 +1,0 @@
-import './add-learning-resource.html';

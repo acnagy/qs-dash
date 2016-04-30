@@ -1,0 +1,35 @@
+/************************************************
+        Resources
+ ***********************************************/
+
+#resources-grid {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+div.resource {
+    box-shadow: 2px 2px 1px grey;
+    min-width: 25%;
+    max-width: 38%;
+    padding: 20px;
+    margin: 10px;
+    background: linear-gradient(white, #F1F1F1);
+    display: inline-block;
+}
+div.resource-details {
+    display: flex;
+    margin-top: 10px;
+}
+
+.resource-checked-count {
+    margin: 5px;
+    display: inline-block;
+    color: #CADF4E;
+    border: thin solid #CADF4E;
+    border-radius: 100px;
+    max-height: 24px;
+    line-height: 24px;
+    padding: 0.5em;
+    align-content: center;
+}

@@ -1,0 +1,62 @@
+/************************************************
+        Login Page
+ ***********************************************/
+
+form.login {
+    display: block;
+    text-align: center;
+    min-width: 80%;
+}
+h1.login {
+    margin-top: 5em;
+    font-weight: 200;
+    text-align: center;
+}
+h2.login {
+    font-weight: 200;
+    font-size: 22px;
+    display: inline;
+}
+h2.login-error {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 7px 7px;
+    text-align: center;
+    display: block
+}
+label.login {
+    display: flex;
+    justify-content: space-around;
+
+}
+div.login-label, div.login-field {
+    width: 45%;
+    padding-top: 2em;
+}
+div.login-label {
+    text-align: right;
+    padding-right: 5%;
+}
+div.login-field {
+    padding-right: 20%;
+    display: inherit;
+}
+input[type=email].login, input[type=password].login {
+    display: inline;
+    min-width: 225px;
+    max-height: 500px;
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+    color: white;
+    border: thin solid white;
+
+}
+#showLoginLink, #showNewLoginLink {
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 1px 1px rgba(255, 255, 255, 0.2);
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+input[type=email]:focus, input[type=password]:focus, input[type=submit]:focus {
+    outline: none;
+    border: 2px solid white;
+}

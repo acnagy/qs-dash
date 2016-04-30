@@ -1,0 +1,67 @@
+/************************************************
+        Add Resource Section
+ ***********************************************/
+
+.add-resource-template{
+    box-shadow: 2px 2px 1px grey;
+    padding: 2em;
+    margin: 1em;
+    background: linear-gradient(white, #F1F1F1);
+}
+.add-learning {
+    margin: 0px 30px;
+}
+form.add-resource-template{
+    margin: 30px;
+}
+form.add-resource-template > div {
+    margin-bottom: 20px;
+    width: 100%;
+    display: block;
+}
+form.add-resource-template > div > label {
+    margin: 10px;
+}
+form.add-resource-template > div > input[type=text] {
+    width: 50%;
+    padding-left: 10px;
+    display: block;
+    margin: 10px 0px;
+    background: white;
+    padding: 1px 20px;
+}
+div.checkboxes {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+div.checkboxes > div {
+    display: block;
+    width: 100%;
+    margin: 10px 0px;
+}
+form.add-resource-template > div > textarea { 
+    width: 50%;
+    display: block;
+    margin: 10px 0px;
+}
+form.add-resource-template > input[type=submit] {
+    color: black;
+    border: thin solid black;
+    width: 150px;
+    background: rgba(0, 0, 0, 0.025);
+    margin: 10px 0px;
+}
+form.add-resource-template > input[type=submit]:focus,
+form.add-resource-template > input[type=submit]:hover, 
+form.add-resource-template > div > input[type=text]:focus,
+form.add-resource-template > div > textarea:focus {
+    border: 2px solid black;
+    outline: none;
+    box-shadow: none;
+    margin: 9px 0px;
+}
+form.add-resource-template > div > textarea:before:focus {
+    outline: none;
+    -webkit-appearance:none;
+}

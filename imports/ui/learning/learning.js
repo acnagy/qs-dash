@@ -1,6 +1,7 @@
-import { Resources } from '../api/resources.js';
+import { Resources } from '../../api/resources.js';
 
 import './learning.html';
+import './learning.css';
 
 if (Meteor.isClient) { 
     Template.learning.events({

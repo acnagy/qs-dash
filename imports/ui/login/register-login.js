@@ -1,4 +1,5 @@
 import './register-login.html';
+import './register-login.css';
 
 if (Meteor.isClient) {
 
