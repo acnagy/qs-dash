@@ -1,3 +1,5 @@
+import './register-login.html';
+
 if (Meteor.isClient) {
 
     // Registration and User Creation
@@ -29,7 +31,6 @@ if (Meteor.isClient) {
         },
         'submit form': function(event) {
             event.preventDefault();
-            console.log('login form submitted');
             var emailVar = $('[name=loginEmail]').val();
             var passwordVar = $('[name=loginPassword]').val()
             Meteor.loginWithPassword(emailVar, passwordVar, function(err){

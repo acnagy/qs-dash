@@ -1,3 +1,7 @@
+import { Resources } from '../api/resources.js';
+
+import './learning.html';
+
 if (Meteor.isClient) { 
     Template.learning.events({
         'click #add_resource' : function() {
@@ -17,7 +21,12 @@ if (Meteor.isClient) {
     Template.learning.helpers({
         showAddLearningTemplate(){
             return Session.get('showAddLearningTemplate');
-        }
+        },
+        resources: [
+            { title: 'Title 1', description: 'Description', votes: 1, font_awesome: "fa fa-file-text-o" },
+            { title: 'Title 2', description: 'Description', votes: 2, font_awesome: "fa fa-play-circle-o" },
+            { title: 'Title 3', description: 'Description', votes: 3, font_awesome: "fa fa-play-circle-o" },
+        ],
     });
 
     Template.add_resource_template.events({
