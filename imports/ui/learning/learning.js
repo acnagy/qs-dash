@@ -3,25 +3,25 @@ import { Resources } from '../../api/resources.js';
 import './learning.html';
 import './learning.css';
 
-if (Meteor.isClient) { 
+if (Meteor.isClient) {
+    Template.learning.created = function(){
+        this.showAddResourceTemplate = new ReactiveVar(false);
+    }
+
     Template.learning.events({
-        'click #add_resource' : function() {
-            if (Session.get('showAddLearningTemplate',true)) {
-                Session.set('showAddLearningTemplate', false);
-                $('#add_resource_template').addClass('hidden');
-            } else if (Session.get('showAddLearningTemplate', false)){
-                Session.set('showAddLearningTemplate', true);
-                $('#add_resource_template').removeClass('hidden');
-            } else {
-                Session.set('showAddLearningTemplate', true);
-                $('#add_resource_template').removeClass('hidden');
-            }
+        'click #add_resource' : function(event, template) {
+            var showAddResourceTemplate = template.showAddResourceTemplate.get();
+            template.showAddResourceTemplate.set(!showAddResourceTemplate);
+            console.log('clicked!');
+            console.log(showAddResourceTemplate);
         }
     });
 
     Template.learning.helpers({
-        showAddLearningTemplate(){
-            return Session.get('showAddLearningTemplate');
+        showAddResourceTemplate : function() {
+            console.log('helper');
+            return Template.instance().showAddResourceTemplate.get();
+
         },
         resources: [
             { title: 'Title 1', description: 'Description', votes: 1, font_awesome: "fa fa-file-text-o" },
@@ -30,9 +30,4 @@ if (Meteor.isClient) {
         ],
     });
 
-    Template.add_resource_template.events({
-       'submit form' : function(event) {
-            event.preventDefault();
-       }
-    })
 }

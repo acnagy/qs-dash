@@ -17,11 +17,13 @@ div.resource {
     background: linear-gradient(white, #F1F1F1);
     display: inline-block;
 }
+div.resource > label.resource > a {
+    margin: 10px;
+}
 div.resource-details {
     display: flex;
     margin-top: 10px;
 }
-
 .resource-checked-count {
     margin: 5px;
     display: inline-block;

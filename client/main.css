@@ -70,9 +70,12 @@ header {
 }
 
 label {
+    display: table;
     font-family: 'Work Sans', 'sans-serif';
     font-weight: 300;
     font-size: 24px;
+    line-height: 24px;
+    vertical-align: middle;
 }
 input[type=text],input[type=password], input[type=email] {
     font-family: "Work Sans", sans-serif;
@@ -85,10 +88,27 @@ input[type=text],input[type=password], input[type=email] {
     line-height: 26px;
     outline: none;
 }
-input[type=checkbox] {
-      transform: scale(1.5);
-      -webkit-transform: scale(1.5);
-      margin: 0em 3em;
+input[type="checkbox"]{
+    display: table-cell;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: grey;
+    border-radius: 1px;
+    position: relative;
+    box-sizing: content-box ;
+    width: 24px;
+    height: 24px;
+    border-width: 0;
+    transition: all .2s linear;
+}
+input[type="checkbox"]:checked{
+    background-color: #CADF4E;
+}
+input[type="checkbox"]:focus{
+    outline: 0 none;
+    box-shadow: none;
 }
 textarea {
     border: thin black solid;
@@ -109,7 +129,7 @@ input[type=submit]{
     display: inline-block;
     text-align: center;
     width: 100px;
-    margin: 5%;
+    margin: 10px;
     color: white;
     background: rgba(255, 255, 255, 0.2);
     box-shadow: none;
