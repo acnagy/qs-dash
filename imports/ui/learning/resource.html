@@ -1,12 +1,14 @@
 <template name="resource">
     <div class="resource">
-            <label class="resource">
+            
+            <div class="resource-title">
                 <input type="checkbox">
-                <a href="https://www.google.com"><span class="fa {{font_awesome}}">  {{title}}</span></a>
-            </label>
+                <a href="{{resourceUrl}}" target="_blank"><span class="fa {{textType}} {{videoType}}">  {{resourceTitle}}</span></a>
+            </div>
+            
             <div class="resource-details">
                 <h3 class="resource-checked-count">{{votes}}</h3>
-                <p>{{description}}</p>
+                <p>{{resourceDescription}}</p>
             </div>
     </div>
 </template>

@@ -6,6 +6,7 @@
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
+    padding: 0px 40px;
 }
 
 div.resource {
@@ -17,21 +18,38 @@ div.resource {
     background: linear-gradient(white, #F1F1F1);
     display: inline-block;
 }
-div.resource > label.resource > a {
-    margin: 10px;
+div.resource-title {
+    display: table;
+    font-family: 'Work Sans', 'sans-serif';
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 24px;
+    vertical-align: middle;
+    margin: 5px;
+}
+div.resource > div.resource-title > a {
+    margin: 15px;
+}
+div.resource-title > input[type=checkbox] {
+    margin: 10px 0px 10px 0px;
+}
+div.resource-details > p {
+    margin-left: 10px;
 }
 div.resource-details {
     display: flex;
     margin-top: 10px;
 }
 .resource-checked-count {
-    margin: 5px;
-    display: inline-block;
+    display: table-cell;
     color: #CADF4E;
     border: thin solid #CADF4E;
     border-radius: 100px;
-    max-height: 24px;
+    height: 24px;
+    width: 24px;
     line-height: 24px;
-    padding: 0.5em;
+    padding: 6px;
     align-content: center;
+    margin: 10px 0px 10px 0px;
+    text-align: center;
 }

@@ -77,7 +77,7 @@ label {
     line-height: 24px;
     vertical-align: middle;
 }
-input[type=text],input[type=password], input[type=email] {
+input[type=text],input[type=password], input[type=email], input[type=url] {
     font-family: "Work Sans", sans-serif;
     background: none;
     box-shadow: none;
@@ -101,7 +101,6 @@ input[type="checkbox"]{
     width: 24px;
     height: 24px;
     border-width: 0;
-    transition: all .2s linear;
 }
 input[type="checkbox"]:checked{
     background-color: #CADF4E;
@@ -121,14 +120,10 @@ textarea {
     padding: 10px 20px;
     font-size: 18px;
 }
-.hidden {
-    display: none !important;
-}
-
 input[type=submit]{
     display: inline-block;
     text-align: center;
-    width: 100px;
+    width: 120px;
     margin: 10px;
     color: white;
     background: rgba(255, 255, 255, 0.2);
@@ -170,11 +165,13 @@ nav > section {
     text-align: right;
     cursor: pointer;
 }
-
 .button:focus, .button:hover {
     outline: none;
     border: 2px solid white;
     padding: 6px;
+}
+.hidden {
+    display: none;
 }
 
 

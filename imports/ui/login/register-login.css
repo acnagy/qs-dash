@@ -40,6 +40,9 @@ div.login-field {
     padding-right: 20%;
     display: inherit;
 }
+input[type=submit].login{
+    margin-top: 50px;
+}
 input[type=email].login, input[type=password].login {
     display: inline;
     min-width: 225px;

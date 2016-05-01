@@ -1,7 +1,7 @@
 <template name="new_login">    
     <form class="login" id="#new-login-form">
         <h1 class="login">New Login</h1>
-        <h2 class="login" id="showLoginLink">Returning?</h2>
+        <input type="submit" id="showLoginLink" value="Returning?">
         
         <label class="login">
             <div class="login-label">
@@ -21,7 +21,7 @@
             </div>
         </label>
         
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit" class="login">
     
     </form>
 </template>
@@ -29,8 +29,7 @@
 <template name="login">
     <form class="login" id="#login-form">
         <h1 class="login">Login</h1>
-        <h2 class="login-error login hidden" id="login-error">Email/Password combo doesn't seem to be correct</h2>
-        <h2 class="login" id="showNewLoginLink">New?</h2>
+        <input type="submit" id="showNewLoginLink" value="New?">
 
         <label class="login">
             <div class="login-label">
@@ -50,7 +49,7 @@
             </div>
         </label>
         
-        <input type="submit" value="Login">
+        <input type="submit" value="Login" class="login">
     
     </form>
 </template>

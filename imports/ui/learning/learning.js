@@ -23,11 +23,9 @@ if (Meteor.isClient) {
             return Template.instance().showAddResourceTemplate.get();
 
         },
-        resources: [
-            { title: 'Title 1', description: 'Description', votes: 1, font_awesome: "fa fa-file-text-o" },
-            { title: 'Title 2', description: 'Description', votes: 2, font_awesome: "fa fa-play-circle-o" },
-            { title: 'Title 3', description: 'Description', votes: 3, font_awesome: "fa fa-play-circle-o" },
-        ],
+        resources() {
+            return Resources.find({});
+        }
     });
 
 }
