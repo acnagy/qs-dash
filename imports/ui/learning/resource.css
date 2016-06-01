@@ -27,6 +27,9 @@ div.resource-title {
     vertical-align: middle;
     margin: 5px;
 }
+div.resource-title > a > span.fa:hover{
+    text-decoration: none
+}
 div.resource > div.resource-title > a {
     margin: 15px;
 }
@@ -35,6 +38,7 @@ div.resource-title > input[type=checkbox] {
 }
 div.resource-details > p {
     margin-left: 10px;
+    overflow: scroll;
 }
 div.resource-details {
     display: flex;

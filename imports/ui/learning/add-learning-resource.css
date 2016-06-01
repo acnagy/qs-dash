@@ -48,7 +48,7 @@ div.checkboxes > div > p {
 form.add-resource-template > div > textarea { 
     width: 50%;
     display: block;
-    margin: 10px 0px;
+    margin: 10px 0px 2px 0px;
 }
 form.add-resource-template > input[type=submit] {
     color: black;
@@ -67,13 +67,20 @@ form.add-resource-template > div > textarea:focus {
     box-shadow: none;
     margin: 9px 0px;
 }
-div.checkboxes > div > input[type=checkbox]:focus {
+form.add-resource-template > div > textarea:focus {
+    margin: 10px 0px 0px 0px;
+}
+div.checkboxes > div > input[type=radio]:focus {
     border: 2px solid black;
+    margin: 10px 0px 0px 0px;
     outline: none;
     width: 20px;
     height: 20px;
 }
-form.add-resource-template > div > textarea:before:focus {
-    outline: none;
-    -webkit-appearance:none;
+
+p.subtext {
+    margin: 0 0 0 15px;
+    color: grey;
+    font-size: 14px;
+    padding: 0;
 }

@@ -1,7 +1,11 @@
 <template name="new_login">    
     <form class="login" id="#new-login-form">
-        <h1 class="login">New Login</h1>
-        <input type="submit" id="showLoginLink" value="Returning?">
+
+        <h2 id="form-error" class="login-error hidden">Hmm... Email is already in use.</h2>
+
+        <p>Returning to QS Learning?</p>
+        <p id="showLoginLink">Click to Login</p>
+        <p class="reset-pw">Reset Password</p>
         
         <label class="login">
             <div class="login-label">
@@ -28,8 +32,12 @@
 
 <template name="login">
     <form class="login" id="#login-form">
-        <h1 class="login">Login</h1>
-        <input type="submit" id="showNewLoginLink" value="New?">
+
+        <h2 id="form-error" class="login-error hidden"></h2>
+
+        <p>New to QS Learning?</p>
+        <p id="showNewLoginLink">Click to Register</p>
+        <p class="reset-pw">Reset Password</p>
 
         <label class="login">
             <div class="login-label">
@@ -48,7 +56,7 @@
                 <input  class="login" type="password" name="loginPassword">
             </div>
         </label>
-        
+
         <input type="submit" value="Login" class="login">
     
     </form>

@@ -24,7 +24,7 @@ if (Meteor.isClient) {
 
         },
         resources() {
-            return Resources.find({});
+            return Resources.find({}, {sort: {createdAt: -1}});
         }
     });
 

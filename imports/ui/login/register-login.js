@@ -1,3 +1,5 @@
+import { Accounts } from 'meteor/accounts-base';
+
 import './register-login.html';
 import './register-login.css';
 
@@ -14,10 +16,18 @@ if (Meteor.isClient) {
             event.preventDefault();
             var emailVar = $('[name=newLoginEmail]').val();
             var passwordVar = $('[name=newLoginPassword]').val();
-            Accounts.createUser({
-                email: emailVar,
-                password: passwordVar
-            });
+                Accounts.createUser({
+                    email: emailVar,
+                    password: passwordVar
+                },function(err) {
+                    if (err) {
+                        $('#form-error').removeClass('hidden');
+                        $('#form-error').html('Hmm.. that email seems to already be in use');
+                        console.log('email already in use');
+                    } else {
+                        console.log('login created');
+                    }
+                });
             console.log('registration form submitted');
         }
     });
@@ -36,7 +46,9 @@ if (Meteor.isClient) {
             var passwordVar = $('[name=loginPassword]').val()
             Meteor.loginWithPassword(emailVar, passwordVar, function(err){
                 if (err) {
-                    $('#login-error').removeClass('hidden')
+                    $('#form-error').removeClass('hidden');
+                    $('#form-error').html("Hmm... Username and Password don't match");
+                    console.log('username/password error');
                 } else {
                     return false;
                 }

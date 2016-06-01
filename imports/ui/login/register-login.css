@@ -7,6 +7,11 @@ form.login {
     text-align: center;
     min-width: 80%;
 }
+form.login > p, form.register > p {
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0px;
+}
 h1.login {
     margin-top: 5em;
     font-weight: 200;
@@ -17,11 +22,12 @@ h2.login {
     font-size: 22px;
     display: inline;
 }
-h2.login-error {
+#login-error, #email-error, #form-error {
     background: rgba(0, 0, 0, 0.2);
     padding: 7px 7px;
     text-align: center;
-    display: block
+    font-size: 25px;
+    margin: 0px;
 }
 label.login {
     display: flex;
@@ -53,11 +59,18 @@ input[type=email].login, input[type=password].login {
     border: thin solid white;
 
 }
-#showLoginLink, #showNewLoginLink {
-    color: rgba(255, 255, 255, 0.8);
-    text-shadow: 1px 1px rgba(255, 255, 255, 0.2);
+#showLoginLink, #showNewLoginLink, .reset-pw {
+    color: rgba(255, 255, 255, 1.0);
     font-size: 20px;
     margin-bottom: 0px;
+    text-decoration: underline;
+    cursor: pointer;
+    display: block;
+    margin-top: 0px;
+}
+.reset-pw{
+    margin-top: 5px;
+    font-size: 14px;
 }
 input[type=email]:focus, input[type=password]:focus, input[type=submit]:focus {
     outline: none;

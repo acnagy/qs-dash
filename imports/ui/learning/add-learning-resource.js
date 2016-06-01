@@ -7,34 +7,26 @@ import './learning.html';
 
 if (Meteor.isClient) {
     Template.add_resource_template.events({
-       'submit form' : function(event) {
+        'click :radio': function(event, template) {
+            var fileType = template.find('input:radio[name=fileType]:checked');
+            console.log($(fileType).val());
+
+        },
+
+        'submit form' : function(event) {
             event.preventDefault();
 
             const target = event.target;
             const resourceTitle = target.resourceTitle.value;
-            const resourceUrl = target.resourceUrl.value
-            var textType = target.textCheckbox.value;
-            var videoType = target.videoCheckbox.value;
+            const resourceUrl = target.resourceUrl.value;
+            var fileType = target.fileType.value;
             const resourceDescription = target.resourceDescription.value;
-            const votes = 0
-
-            if (textType) {
-                textType = "fa-file-text-o";
-            } else {
-                textType = "";
-            }
-
-            if (videoType) {
-                videoType = "fa-play-circle-o";
-            } else {
-                videoType = "";
-            }
+            const votes = 0;
 
             Resources.insert({
                 resourceTitle,
                 resourceUrl,
-                textType,
-                videoType,
+                fileType,
                 resourceDescription,
                 votes,
                 createdAt: new Date(),

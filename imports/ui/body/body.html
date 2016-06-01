@@ -3,8 +3,10 @@
         {{> learning}}
     {{else}}
         {{#if showNewLoginTemplate}}
+            <h1 class="login">New Login</h1>    
             {{> new_login}}
         {{else}}
+            <h1 class="login">Login</h1> 
             {{> login}}
         {{/if}}
     {{/if}}

@@ -4,29 +4,30 @@
     <form class="add-resource-template">
         <div>
             <label>Title</label>
-            <input type="text" name="resourceTitle">
+            <input type="text" name="resourceTitle" required>
         </div>
 
         <div>
             <label>URL</label>
-            <input type="url" name="resourceUrl">
+            <input type="url" name="resourceUrl" required>
         </div>
 
         <div class="checkboxes">
             <label>Type</label>
             <div>
-                <input type="checkbox" name="textCheckbox" value="text">
+                <input type="radio" name="fileType" value="fa-file-text-o" class="radio" checked>
                 <p><span class="fa fa-file-text-o">  Text</span></p>
             </div>
             <div>
-                <input type="checkbox" name="videoCheckbox" value="video">
+                <input type="radio" name="fileType" value="fa-play-circle-o" class="radio" >
                 <p><span class="fa fa-play-circle-o">  Video</span></p>
             </div>
         </div>
 
         <div>
             <label>Description</label>
-            <textarea name="resourceDescription"></textarea>
+            <textarea name="resourceDescription" required maxlength="140"></textarea>
+            <p class="subtext">Max Length = 140 characters</p>
         </div>
 
         <input type="submit" value="Post Resource">
